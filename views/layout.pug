@@ -1,0 +1,24 @@
+block variables 
+doctype html 
+html 
+  head
+    meta(charset="utf-8")
+    title #{title} | Test website
+    block scripts 
+      link(rel="stylesheet", type="text/css", href="/styles.css")
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  body
+    header#header 
+      .header-content   
+        h2#site-name 
+          a(href="/") Juice Jam 
+        nav#main-navigation 
+          ul.menu-flex
+            li 
+              a(href="/about") About
+            li
+              a(href="/admin/menu") Menu
+    main#main 
+      block main-content 
+    footer#footer 
+      p &copy; Juice Jam, 2023.

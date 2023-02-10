@@ -1,0 +1,26 @@
+extends layout 
+
+block main-content 
+  .content 
+    h1.page-title Menu 
+    table.table 
+      thead 
+        tr 
+          th Name 
+          th Ingredients
+          th Calories 
+          th Price
+      tbody 
+        each link in menu
+          tr 
+            td #{link.name}
+            td #{link.ingredients}
+            td #{link.calories}
+            td #{link.price}
+            
+              //- form(action="/admin/menu/delete")
+              //-   input(type="hidden", name="linkId", value=link._id)
+              //-   button(type="submit") Delete
+              //- form(action="/admin/menu/edit")
+              //-   input(type="hidden", name="linkId", value=link._id)
+              //-   button(type="submit") Edit
